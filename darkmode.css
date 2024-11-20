@@ -1,0 +1,21 @@
+/* Base dark mode styles */
+:root[data-theme="dark"] {
+  --dark-bg: #1a1a1a;
+  --dark-text: #e0e0e0;
+}
+
+/* High contrast mode styles */
+:root[data-theme="dark"][data-contrast="high"] {
+  --dark-bg: #000000;
+  --dark-text: #ffffff;
+}
+
+/* Image dimming */
+[data-theme="dark"] img {
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Transition effects */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
